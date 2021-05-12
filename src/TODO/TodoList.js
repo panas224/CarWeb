@@ -1,12 +1,22 @@
 import React from "react";
+import TodoItem from "./TodoItem";
 
-export default  function TodoList(){
-    return(
-        <ul>
-            <a href={"https://2048game.com/ru/"}>1</a>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
+const styles = {
+    ul: {
+        listStyle: 'none',
+        margin: 0,
+        padding: 0
+
+
+    }
+}
+export default function TodoList(props) {
+    return (
+        <ul style={styles.ul}>
+            { props.todos.map(todo=>{
+                return <TodoItem todo={todo} key={todo.id}/>
+            })}
+
         </ul>
     )
 }
