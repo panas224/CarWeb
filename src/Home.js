@@ -5,14 +5,8 @@ class Home extends Component {
     return (
       <div>
         <h2>HELLO</h2>
-        <p>Cras facilisis urna ornare ex volutpat, et
-        convallis erat elementum. Ut aliquam, ipsum vitae
-        gravida suscipit, metus dui bibendum est, eget rhoncus nibh
-        metus nec massa. Maecenas hendrerit laoreet augue
-        nec molestie. Cum sociis natoque penatibus et magnis
-        dis parturient montes, nascetur ridiculus mus.</p>
-
-        <p>Duis a turpis sed lacus dapibus elementum sed eu lectus.</p>
+        <p>Welcome to my first React web app.This web-site have information about Mercedes-Benz vehicles.</p>
+          <p>On the top you can see tabs for helping user and there are search bar if you know exactly for what model you need more information</p>
       </div>
     );
   }
