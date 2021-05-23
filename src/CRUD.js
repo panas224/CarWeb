@@ -50,7 +50,7 @@ class CRUD extends React.Component {
                     <form id="to-do-form" onSubmit={this.addItem}>
                         <input type="text" placeholder="Enter text"
                                value={this.state.currentItem.text}
-                               onChange={this.hanleInput}/>
+                               onChange={this.handleInput}/>
                         <button type="submit">Add new car</button>
                     </form>
                 </header>
