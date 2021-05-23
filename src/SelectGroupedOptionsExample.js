@@ -31,7 +31,7 @@ const SelectGroupedOptionsExample = () => (
                 ],
             },
         ]}
-        placeholder="Choose a car"
+        placeholder="Search for car"
     />
 );
 

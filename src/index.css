@@ -45,8 +45,11 @@ ul.header li a {
     background-color: #0099FF;
 }
 
-div.search {
+div.search-bar {
     position: absolute;
-    top: 55px;
-    right: 20px;
+    top: 45px;
+    right: 150px;
+    height: 20px;
+    width: 150px;
+
 }

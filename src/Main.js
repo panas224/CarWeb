@@ -12,22 +12,6 @@ import SelectGroupedOptionsExample from "./SelectGroupedOptionsExample";
 
 
 class Main extends React.Component {
-    state = {
-        names: [
-            'Mercedes-Benz',
-            'Audi',
-            'BMW'
-        ],
-        searchTerm: ''
-    }
-    editSearchTerm = (e) => {
-        this.setState({searchTerm: e.target.value})
-    }
-
-    dynamicSearch = () => {
-        return this.state.names.filter(name => name.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
-    }
-
     render() {
         return (
             <HashRouter>
@@ -38,9 +22,10 @@ class Main extends React.Component {
                         <li><NavLink to="/futurePlans">My Future Plans</NavLink></li>
                         <li><NavLink to="/contact">Contact</NavLink></li>
                     </ul>
-                    <div className="search">
-                        <input type="text" value={this.state.searchTerm} onChange={this.editSearchTerm} placeholder='Search for car'/>
+                    <div className="search-bar">
+                       <SelectGroupedOptionsExample/>
                     </div>
+
                     <div className="content">
                         <Route exact path="/" component={Home}/>
                         <Route path="/catalogue" component={Catalogue}/>
@@ -48,7 +33,7 @@ class Main extends React.Component {
                         <Route path="/contact" component={Contact}/>
                     </div>
                 </div>
-                <SelectGroupedOptionsExample/>
+
             </HashRouter>
 
         );
