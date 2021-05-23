@@ -7,8 +7,8 @@ import {
 import Home from "./Home";
 import Catalogue from "./Catalogue";
 import Contact from "./Contact";
-import Names from "./Names";
 import MyPlans from "./MyPlans";
+import SelectGroupedOptionsExample from "./SelectGroupedOptionsExample";
 
 
 class Main extends React.Component {
@@ -40,9 +40,6 @@ class Main extends React.Component {
                     </ul>
                     <div className="search">
                         <input type="text" value={this.state.searchTerm} onChange={this.editSearchTerm} placeholder='Search for car'/>
-                        <div className="searchResult">
-                            <Names names={this.dynamicSearch()}/>
-                        </div>
                     </div>
                     <div className="content">
                         <Route exact path="/" component={Home}/>
@@ -51,7 +48,9 @@ class Main extends React.Component {
                         <Route path="/contact" component={Contact}/>
                     </div>
                 </div>
+                <SelectGroupedOptionsExample/>
             </HashRouter>
+
         );
     }
 }
