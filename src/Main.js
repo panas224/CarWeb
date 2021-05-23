@@ -11,7 +11,7 @@ import Catalogue from "./Catalogue";
 import Contact from "./Contact";
 import MyPlans from "./MyPlans";
 import SelectGroupedOptionsExample from "./SelectGroupedOptionsExample";
-import CRUDOperations from "./CRUDOperations";
+import CRUD from "./CRUD";
 
 
 class Main extends React.Component {
@@ -26,9 +26,8 @@ class Main extends React.Component {
                         <li><NavLink to="/contact">Contact</NavLink></li>
                     </ul>
                     <div className="search-bar">
-                       <SelectGroupedOptionsExample/>
+                        <SelectGroupedOptionsExample/>
                     </div>
-                    <CRUDOperations/>
                     <div className="content">
                         <Route exact path="/" component={Home}/>
                         <Route path="/catalogue" component={Catalogue}/>
@@ -36,7 +35,9 @@ class Main extends React.Component {
                         <Route path="/contact" component={Contact}/>
                     </div>
                 </div>
-
+                <div className="CRUD">
+                    <CRUD/>
+                </div>
             </HashRouter>
 
         );
