@@ -1,14 +1,17 @@
 import React, {Component} from "react";
 import {
+    BrowserRouter as Router,
     Route,
     NavLink,
-    HashRouter
+    HashRouter,
+    Switch
 } from "react-router-dom";
 import Home from "./Home";
 import Catalogue from "./Catalogue";
 import Contact from "./Contact";
 import MyPlans from "./MyPlans";
 import SelectGroupedOptionsExample from "./SelectGroupedOptionsExample";
+import CRUDOperations from "./CRUDOperations";
 
 
 class Main extends React.Component {
@@ -25,7 +28,7 @@ class Main extends React.Component {
                     <div className="search-bar">
                        <SelectGroupedOptionsExample/>
                     </div>
-
+                    <CRUDOperations/>
                     <div className="content">
                         <Route exact path="/" component={Home}/>
                         <Route path="/catalogue" component={Catalogue}/>
