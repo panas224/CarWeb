@@ -25,6 +25,7 @@ ul.header li a {
     text-decoration: none;
     padding: 20px;
     display: inline-block;
+
 }
 
 .content {
@@ -49,7 +50,7 @@ div.search-bar {
     position: absolute;
     top: 45px;
     right: 100px;
-    height: 20px;
+    height: 15px;
     width: 150px;
 
 }
