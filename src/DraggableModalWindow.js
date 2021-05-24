@@ -1,25 +1,26 @@
 import React, {Component} from "react";
 import "./DraggableModalWindow.css"
 
-export default class DraggableModalWindow extends Component {
+class DraggableModalWindow extends Component {
     constructor(props) {
         super(props);
         this.state = {
             diffX: 0,
             diffY: 0,
             dragging: false,
-            styles: {},
-            this.dragStart = this.dragStart.bind(this);
-            this.dragging = this.dragging.bind(this);
-            this.dragEnd = this.dragEnd.bind(this);
+            styles: {}
         }
+        this.dragStart = this.dragStart.bind(this);
+        this.dragging = this.dragging.bind(this);
+        this.dragEnd = this.dragEnd.bind(this);
     }
+
 
     dragStart(e) {
         this.setState({
             diffX: e.screenX - e.currentTarget.getBoundingClientRect().left,
             diffY: e.screenY - e.currentTarget.getBoundingClientRect().top,
-            dragging: true;
+            dragging: true
 
         });
     }
@@ -61,5 +62,8 @@ export default class DraggableModalWindow extends Component {
                 </div>
             </div>
         )
+
     }
 }
+
+export default DraggableModalWindow;

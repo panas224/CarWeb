@@ -13,6 +13,8 @@ import MyPlans from "./MyPlans";
 import SelectGroupedOptionsExample from "./SelectGroupedOptionsExample";
 import CRUD from "./CRUD";
 import ShowExpandInfo from "./ShowExpandInfo";
+import DraggableModalWindow from "./DraggableModalWindow";
+import Window from "./Window";
 
 
 class Main extends React.Component {
@@ -37,7 +39,9 @@ class Main extends React.Component {
                         <Route path="/contact" component={Contact}/>
                         <Route path="/info" component={ShowExpandInfo}/>
                     </div>
+                    <CRUD/>
                 </div>
+                <Window/>
             </HashRouter>
 
         );
