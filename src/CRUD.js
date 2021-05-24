@@ -1,8 +1,12 @@
 import React from "react";
 import "./CRUD.css"
+import ListCars from "./ListCars";
+import {library} from "@fortawesome/fontawesome-svg-core";
+import {faTrash} from "@fortawesome/free-solid-svg-icons";
+
+library.add(faTrash)
 
 class CRUD extends React.Component {
-    newItems;
     constructor(props) {
         super(props);
         this.state = {
@@ -14,6 +18,7 @@ class CRUD extends React.Component {
         }
         this.handleInput = this.handleInput.bind(this);
         this.addItem = this.addItem.bind(this);
+        this.deleteItem = this.deleteItem.bind(this)
     }
 
     handleInput(e) {
@@ -30,17 +35,25 @@ class CRUD extends React.Component {
         e.preventDefault();
         const newItem = this.state.currentItem;
         console.log(newItem)
-        if (newItem.text!==""){
-            const items=[...this.state.items, newItem];
+        if (newItem.text !== "") {
+            const newItems = [...this.state.items, newItem];
             this.setState({
-                items:newItem,
-                currentItem:{
-                    text:'',
-                    key:''
+                items: newItems,
+                currentItem: {
+                    text: '',
+                    key: ''
                 }
 
             })
         }
+    }
+
+    deleteItem(key) {
+        const filterItems = this.state.items.filter(item => item.key !== key);
+        this.setState({
+                items: filterItems
+            }
+        )
     }
 
     render() {
@@ -54,6 +67,9 @@ class CRUD extends React.Component {
                         <button type="submit">Add new car</button>
                     </form>
                 </header>
+                <ListCars items={this.state.items} deleteItem={this.deleteItem}>
+
+                </ListCars>
             </div>
         )
     }
