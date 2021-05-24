@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import DraggableModalWindow from "./DraggableModalWindow";
+import "./Window.css"
 
 export default class Window extends Component{
     constructor(props) {
@@ -19,7 +20,6 @@ export default class Window extends Component{
 
 		return (
 			<div className='MainApp'>
-                <div className='Title'>Example Dialog Popper</div>
 				<div className='button' onClick={this._showDialog.bind(this)}> Show Dialog </div>
                 <DraggableModalWindow onClose={this._showDialog.bind(this)} show={this.state.showDialog}/>
 			</div>

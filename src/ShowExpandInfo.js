@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import Window from "./Window";
 
 class ShowExpandInfo extends Component {
     constructor(props) {
@@ -32,7 +33,9 @@ class Box extends Component {
             <div>
                 GOT QUESTIONS?
                 Contact me: via <a href="https://www.google.com/intl/ru/gmail/about/">Email</a>
+            <Window/>
             </div>
+
         )
     }
 }

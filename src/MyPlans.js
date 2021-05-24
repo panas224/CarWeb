@@ -1,4 +1,5 @@
-import {Component} from "react";
+import React, {Component} from "react";
+import Window from "./Window";
 
 class MyPlans extends Component{
     render() {
@@ -10,6 +11,7 @@ class MyPlans extends Component{
                 That's all my plans for now, but during writing code ideas can be replenished)
                 If you have the ideas how to optimize and add new features to web app, contact me via gmail(email address is on the contact page)
             </p>
+
         )
     }
 }

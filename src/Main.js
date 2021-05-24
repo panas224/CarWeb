@@ -39,9 +39,7 @@ class Main extends React.Component {
                         <Route path="/contact" component={Contact}/>
                         <Route path="/info" component={ShowExpandInfo}/>
                     </div>
-                    <CRUD/>
                 </div>
-                <Window/>
             </HashRouter>
 
         );
